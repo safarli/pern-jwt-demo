@@ -4,7 +4,11 @@ const cors = require("cors");
 
 //middleware
 
-app.use(cors());
+const corsOptions = {
+  origin: "*"
+}
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 //routes
